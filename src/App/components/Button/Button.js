@@ -4,30 +4,36 @@ import PropTypes from "prop-types";
 
 function Button(props) {
   console.log(props);
-  const [clicked, setClicked] = useState(false)
+  const [clicked, setClicked] = useState(false);
   return (
     <button
       onClick={(evt) => {
-          setClicked(true);
-          setTimeout(()=>{
-              setClicked(false);
-          },1000)
+        setClicked(true);
+        setTimeout(() => {
+          setClicked(false);
+        }, 1000);
         props.lorsqueLeButtonEstClicked();
       }}
-      className={style.Button}
-      style={{ ...props.style, backgroundColor: props.bgcolor, color: props.color }}
+      //une ternaire
+      //className={style.Button+(clicked?' '+style.clicked:'')}
+      className={`${style.Button}${clicked ? " " + style.clicked : ""}`}
+      //className={style.Button}
+      style={{
+        ...props.style,
+        backgroundColor: props.bgcolor,
+        color: props.color,
+      }}
       type={props.type}
     >
       {props.children}
-      <br/>
-      {clicked?'clicked':'unclicked'}
+      <br />
     </button>
   );
 }
 Button.propTypes = {
   //text: PropTypes.string,
   lorsqueLeButtonEstClicked: PropTypes.func.isRequired,
-  style : PropTypes.object,
+  style: PropTypes.object,
   bgcolor: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
   type: PropTypes.string,
