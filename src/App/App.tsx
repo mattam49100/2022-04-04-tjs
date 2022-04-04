@@ -5,11 +5,17 @@ import Button from './components/Button/Button';
 
 function App() { 
   return (
-    <div className="App">
+    <div className="App"> 
       hello world
-      <Button text="Texte bouton" bgcolor="red"/>
+      <Button text="Texte bouton"
+       bgcolor="red"
+        lorsqueLeButtonEstClicked={(arg:any)=> {
+        console.log(arg);
+        }
+      }
+        />
       <Button text="benjamin" />
-      <Button text="button"/>
+      <Button text="button"/> 
     </div>
   );
 }
