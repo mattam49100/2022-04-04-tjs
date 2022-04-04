@@ -1,19 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./Button.module.css";
 import PropTypes from "prop-types";
 
 function Button(props) {
   console.log(props);
+  const [clicked, setClicked] = useState(false)
   return (
     <button
       onClick={(evt) => {
-        props.lorsqueLeButtonEstClicked("Hello");
+          setClicked(true);
+          setTimeout(()=>{
+              setClicked(false);
+          },1000)
+        props.lorsqueLeButtonEstClicked();
       }}
       className={style.Button}
       style={{ ...props.style, backgroundColor: props.bgcolor, color: props.color }}
       type={props.type}
     >
       {props.children}
+      <br/>
+      {clicked?'clicked':'unclicked'}
     </button>
   );
 }
@@ -31,7 +38,7 @@ Button.defaultProps = {
   lorsqueLeButtonEstClicked: () => {
     console.warn("fonction du button undefined");
   },
-  bgcolor: "red",
+  bgcolor: "green",
   color: "white",
 };
 export default Button;

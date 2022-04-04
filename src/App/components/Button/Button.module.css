@@ -10,3 +10,7 @@
    box-shadow: 20px 20px 25px grey;
    cursor: pointer;
 }
+.Button.clicked {
+   box-shadow: 10px 10px 15px grey;
+   border:1px outset grey
+}
