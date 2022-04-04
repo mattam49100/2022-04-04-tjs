@@ -18,7 +18,7 @@ class App extends Component<I_AppProps, I_AppState> {
   componentDidMount() {
     console.log(
       "%c%s",
-      "font-size:24pt; color:gree; font-weight:900",
+      "font-size:24pt; color:green; font-weight:900",
       "le component App est monté"
     );
   }
@@ -38,8 +38,8 @@ class App extends Component<I_AppProps, I_AppState> {
   }
 
   render(): React.ReactNode {
-    return (
-      <div className={style.App}>
+    return ( 
+      <div className={style.App}> 
         value du compteur : {this.state.counter}
         <br />
         <Button
