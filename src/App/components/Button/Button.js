@@ -23,7 +23,7 @@ function Button(props) {
     <button
       onClick={(evt) => {
           // modif async d une valeur d'état
-        setClicked(true);
+        setClicked(true); 
         setTimeout(() => {
           setClicked(false);
         }, 1000);
