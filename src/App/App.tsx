@@ -15,6 +15,27 @@ class App extends Component<I_AppProps, I_AppState> {
     super(props);
     this.state = { counter: 0, uneValue: "Hello" };
   }
+  componentDidMount() {
+    console.log(
+      "%c%s",
+      "font-size:24pt; color:gree; font-weight:900",
+      "le component App est monté"
+    );
+  }
+  componentDidUpdate(oldProps:I_AppProps,oldState:I_AppState){
+    console.log(
+      "%c%s",
+      "font-size:24pt; color:gree; font-weight:900",
+      "====== cmp updated======="
+    );
+    console.log('props->',oldProps,this.props);
+    console.log('props->',oldState,this.state);
+    console.log(
+      "%c%s",
+      "font-size:24pt; color:blue; font-weight:900",
+      "============="
+    );
+  }
 
   render(): React.ReactNode {
     return (
