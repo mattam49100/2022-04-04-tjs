@@ -1,0 +1,12 @@
+.Button {
+   border-radius: 7px;
+   padding: 10px 15px;
+   min-height: 30px; 
+   background-color: blue;
+   color:#fff; 
+   font-weight: 900;
+   border: 0px;
+   margin:0 5px 20px 5px;
+   box-shadow: 20px 20px 25px grey;
+   cursor: pointer;
+}
