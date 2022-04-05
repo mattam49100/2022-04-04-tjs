@@ -8,7 +8,7 @@ describe('<MemeViewer />', () => {
     render(<MemeViewer />);
     
     const memeViewer = screen.getByTestId('MemeViewer');
-
+ 
     expect(memeViewer).toBeInTheDocument();
   });
 });

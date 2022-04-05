@@ -4,7 +4,11 @@ import style from "./App.module.css";
 import FlexWLayout from "./components/layouts/FlexWLayout/FlexWLayout";
 import MemeForm from "./components/MemeForm/MemeForm";
 import MemeViewer from "./components/MemeViewer/MemeViewer";
-import { DummyMeme as initialMemeState,I_Meme, I_Image} from "./interfaces/common";
+import {
+  DummyMeme as initialMemeState,
+  I_Meme,
+  I_Image,
+} from "./interfaces/common";
 
 // On défini les types des variables de notre App
 interface I_AppProps {
@@ -40,6 +44,7 @@ class App extends Component<I_AppProps, I_AppState> {
   render(): React.ReactNode {
     return (
       <div className={style.App}>
+        {JSON.stringify(this.state)}
         <FlexWLayout>
           <MemeViewer
             meme={this.state.currentMeme}
@@ -47,7 +52,18 @@ class App extends Component<I_AppProps, I_AppState> {
               (e) => e.id === this.state.currentMeme.imageId
             )}
           ></MemeViewer>
-          <MemeForm></MemeForm>
+          <MemeForm
+            currentMeme={this.state.currentMeme}
+            images={this.state.images}
+            onInputValueChange={(changedValuesObject: any) => {
+              this.setState({
+                currentMeme: {
+                  ...this.state.currentMeme,
+                  ...changedValuesObject,
+                }, 
+              });
+            }}
+          />
         </FlexWLayout>
       </div>
     );

@@ -28,7 +28,7 @@ const MemeViewer: React.FC<I_MemeVieverProps> = (props) => {
         textDecoration={props.meme.underline ? "uderline" : "none"}
         fontStyle={props.meme.italic ? "italic" : "normal"}
         fontWeight={props.meme.fontWeight}
-      ></text>
+      >{props.meme.text}</text>
     </svg>
   );
 };
