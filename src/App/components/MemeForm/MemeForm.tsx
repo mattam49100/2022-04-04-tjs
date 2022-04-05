@@ -14,7 +14,9 @@ const MemeForm: React.FC<I_MemeFormProps> = (props) => {
   //const [state, setstate] = useState(initialState)
   return (
     <div className={style.MemeForm} data-testid="MemeForm">
-      <form>
+      <form onSubmit={(evt)=>{
+        evt.preventDefault();
+      }}>
         <input
           type="text"
           name="meme_text"
