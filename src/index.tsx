@@ -5,13 +5,20 @@ import App from "./App/App";
 import reportWebVitals from "./reportWebVitals";
 import { store } from "./App/store/store";
 import { Provider } from "react-redux";
+import { BrowserRouter as Router } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
+    {/* on a un Provider de magasin qui gère les données */}
     <Provider store={store}>
-      <App />
+      {/* on a un Router */}
+      <Router>
+        {/* et finalement on a notre Application */}
+        <App />
+      </Router>
     </Provider>
   </React.StrictMode>,
+  // Apllication ratachée au node root du document html
   document.getElementById("root")
 );
 

@@ -51,6 +51,32 @@
       "italic": true,
       "imageId": 1,
       "id": 3
+    },
+    {
+      "titre": "test",
+      "text": "test",
+      "x": 0,
+      "y": 17,
+      "fontWeight": "900",
+      "fontSize": 30,
+      "color": "#000000",
+      "underline": false,
+      "italic": false,
+      "imageId": 1,
+      "id": 4
+    },
+    {
+      "titre": "ahhhhhhhhhhhhhhh",
+      "text": "ahhhhhhhhhh",
+      "x": 50,
+      "y": 200,
+      "fontWeight": "900",
+      "fontSize": 30,
+      "color": "#ff0000",
+      "underline": false,
+      "italic": false,
+      "imageId": 2,
+      "id": 5
     }
   ],
   "images": [
