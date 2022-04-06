@@ -20,14 +20,14 @@ export interface I_Meme {
 }
 
 export const DummyMeme: I_Meme = {
-  titre: "Dummy Meme",
-  text: "Texte Dummy Meme",
-  x: 50,
-  y: 100,
+  titre: "",
+  text: "",
+  x: 0,
+  y: 17,
   fontWeight: "900",
   fontSize: 30,
-  color:'#456123',
-  underline: true,
+  color:'#000000',
+  underline: false,
   italic: false,
   imageId: 0,
 };
