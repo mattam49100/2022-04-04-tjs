@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import style from "./TemplateName.module.scss";
+import style from "./FlexVLayout.module.scss";
 
 
 const initialState = {};
@@ -9,19 +9,19 @@ const initialState = {};
  * @param {*} props
  * @returns
  */
-const TemplateName = (props) => {
+const FlexVLayout = (props) => {
   return (
-    <div className={style.TemplateName} data-testid="TemplateName">
+    <div className={style.FlexVLayout} data-testid="FlexVLayout">
       {props.children}
     </div>
   );
 };
 
-TemplateName.propTypes = {
+FlexVLayout.propTypes = {
   children: PropTypes.any.isRequired,
 };
-TemplateName.defaultProps = {
+FlexVLayout.defaultProps = {
   children: <div>Children absents</div>
 };
 
-export default TemplateName;
+export default FlexVLayout;

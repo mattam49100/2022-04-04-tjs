@@ -1,24 +1,25 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import style from './FlexWLayout.module.scss'
+import React from "react";
+import PropTypes from "prop-types";
+import style from "./FlexWLayout.module.scss";
 
-
+/**
+ *
+ * @param {*} props
+ * @returns
+ */
 const FlexWLayout = (props) => {
-    
   return (
     <div className={style.FlexWLayout} data-testid="FlexWLayout">
-    {props.children}
+      {props.children}
     </div>
   );
 };
 
-
 FlexWLayout.propTypes = {
-  children:PropTypes.any.isRequired,
+  children: PropTypes.any.isRequired,
+};
+FlexWLayout.defaultProps = {
+  children: <div>Children absents</div>
 };
 
-FlexWLayout.defaultProps = {
-  children:<div>Children absents</div>
-}
-
-export default FlexWLayout
+export default FlexWLayout;

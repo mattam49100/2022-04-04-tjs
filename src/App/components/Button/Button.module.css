@@ -1,16 +1,19 @@
 .Button {
-   border-radius: 7px;
-   padding: 10px 15px;
-   min-height: 30px; 
-   background-color: blue;
-   color:#fff; 
-   font-weight: 900;
-   border: 0px;
-   margin:0 5px 20px 5px;
-   box-shadow: 20px 20px 25px grey;
-   cursor: pointer;
+  border-radius: 5px;
+  background-color: rgb(0, 54, 85);
+  color: #fff;
+  border: 0;
+  padding: 10px 15px;
+  margin: 5px;
+  min-width: 40px;
+  font-weight: 700;
+  box-shadow: 10px 10px 20px grey;
+  cursor: pointer;
 }
 .Button.clicked {
-   box-shadow: 10px 10px 15px grey;
-   border:1px outset grey
+    box-shadow: 2px 2px 20px grey;
+    border-style: dashed!important;
+}
+.Button:hover {
+    opacity: 0.8;
 }

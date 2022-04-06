@@ -30,16 +30,6 @@
       "customTemplates": {
         "component": "grc_templates/funcLayout/TemplateName.js"
       }
-    },
-    "BrandClass": {
-      "path": "src/App/metier",
-      "withStyle": false,
-      "withTest": false,
-      "withStory": false,
-      "withLazy": false,
-      "customTemplates": {
-        "component": "grc_templates/BrandClass/TemplateName.js"
-      }
     }
   }
 }
